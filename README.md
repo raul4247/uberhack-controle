@@ -1,1 +1,1 @@
-# interface de controle do funcionamento do backend
+# Interface de controle do funcionamento do backend
