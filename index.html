@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Controle</title>
+
+</head>
+<body>
+	<h1>Esta página faz o teste de funcionamento mínimo viável do nosso backend.</h1>
+	<button onclick="getReq('getAllKids')">Ver crianças cadastradas</button>
+	<button onclick="getReq('getAllDrivers')">Ver motoristas cadastrads</button>
+	<button onclick="getReq('getAllClasses')">Ver atividades cadastradas da plataforma</button>
+</body>
+<script type="text/javascript">
+	let server = 'http://2b1d8632.ngrok.io/uberhack-backend/public/'
+	function getReq(endpoint){
+	    var xmlHttp = new XMLHttpRequest()
+	    xmlHttp.open( "GET", server+endpoint, false )
+	    xmlHttp.send( null )
+	    let obj = xmlHttp.responseText
+		document.write(obj);
+	}
+</script>
+</html>
